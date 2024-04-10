@@ -1,6 +1,6 @@
 # 获取经典病历并且整理
-从[爱爱医网站](https://bingli.iiyi.com/)获取病历
-病历结构<br>
+从[爱爱医网站](https://bingli.iiyi.com/)获取病历<br>
+##病历结构<br>
 {<br>
 "title": ,<br>
 "department": ,<br>
