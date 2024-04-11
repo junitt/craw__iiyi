@@ -5,6 +5,7 @@
 "title": ,<br>
 "department": ,<br>
 "url": ,<br>
+"id":,<br>
 "raw_medical_record":{<br>
     "一般资料":<br>
     "主诉": <br>
