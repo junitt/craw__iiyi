@@ -1,3 +1,4 @@
+from selenium.webdriver.common.by import By
 def init_raw_record():
     return{
         "一般资料":'无',
@@ -32,3 +33,17 @@ def check_dict(raw_rec):
     for key in ref.keys():
         if raw_rec[key]!=ref[key]:
             print(key)
+
+def extract_raw_record_from_eles(elements):
+    raw_record_pair=init_raw_record()
+    for element in elements:
+        attr=element.text
+        attr_cont=element.find_element(By.XPATH,'..').text
+        attr_cont=attr_cont[len(attr)+1:]
+        raw_record_pair[attr]=attr_cont
+    return raw_record_pair
+
+def final_proc_record(raw_rec):
+    for key in raw_rec.keys():
+        raw_rec[key]=raw_rec[key].replace("\t", ",").replace("\n", ",").replace(" ", "")
+    return raw_rec

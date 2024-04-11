@@ -7,19 +7,7 @@ from tqdm import tqdm
 from cv_mod.cv_puzzle_detect import detector
 from slider import CrackSlider
 tot=0
-def extract_raw_record_from_eles(elements):
-    raw_record_pair=init_raw_record()
-    for element in elements:
-        attr=element.text
-        attr_cont=element.find_element(By.XPATH,'..').text
-        attr_cont=attr_cont[len(attr)+1:]
-        raw_record_pair[attr]=attr_cont
-    return raw_record_pair
 
-def final_proc_record(raw_rec):
-    for key in raw_rec.keys():
-        raw_rec[key]=raw_rec[key].replace("\t", ",").replace("\n", ",").replace(" ", "")
-    return raw_rec
 
 def parse_web(id,driver):
     url=f"https://bingli.iiyi.com/show/{id}-1.html"
