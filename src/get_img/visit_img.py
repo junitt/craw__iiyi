@@ -31,7 +31,6 @@ if __name__=='__main__':
     option = webdriver.ChromeOptions()
     option.add_experimental_option('excludeSwitches', ['enable-logging'])
     option.add_argument('log-level=3')
-    option.add_argument("--user-data-dir="+r"C:/Users/liziyang/AppData/Local/Google/Chrome/User Data/")
     option.add_argument('headless')
     driver = webdriver.Chrome(chrome_options=option,executable_path=server_root)
     for id in tqdm(range(66000,66250,1)):
