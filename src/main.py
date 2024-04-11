@@ -61,7 +61,6 @@ def main():
     option = webdriver.ChromeOptions()
     option.add_experimental_option('excludeSwitches', ['enable-logging'])
     option.add_argument('log-level=3')
-    option.add_argument("--user-data-dir="+r"C:/Users/liziyang/AppData/Local/Google/Chrome/User Data/")
     option.add_argument('headless')
     driver = webdriver.Chrome(chrome_options=option,executable_path=server_root)
     slider_manager=CrackSlider(driver)
